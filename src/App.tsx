@@ -649,7 +649,7 @@ export default function App() {
             <div className="checkout-right reveal-child">
               <div className="form-card">
                 <div className="form-header">
-                  <h2>পবিত্র সমর্পণ পত্র (অনলাইন দান ফর্ম)</h2>
+                  <h2>পবিত্র সমর্পণ পত্র (অনলাইন দান ফর্ম test)</h2>
                   <p>অনুগ্রহ করে আপনার তথ্য দিন যাতে পূজার বিশেষ সংকল্পে আপনার নাম ও গোত্র উচ্চারণ করা যায়।</p>
                 </div>
 
