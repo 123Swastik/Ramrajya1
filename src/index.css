@@ -1,0 +1,194 @@
+:root {
+  /* Divine Temple Palette: Sacred Kesariya, Tejasvi Swarna (Gold), Rudraksha Maroon, Divya Shwet & Sandalwood */
+  --sacred-saffron: #ff6f00;
+  /* মহিমান্বিত গেরুয়া / কেশরিয়া */
+  --saffron-bright: #ff9100;
+  /* উজ্জ্বল তেজস্বী সিঁদুরি কমলা */
+  --saffron-deep: #e65100;
+  /* গভীর সিঁদুরি জাফরান */
+  --saffron-glow: rgba(255, 111, 0, 0.45);
+
+  --divine-gold: #ffd700;
+  /* বিশুদ্ধ স্বর্ণবর্ণ */
+  --gold-warm: #f59e0b;
+  /* নক্ষত্র স্বর্ণ */
+  --gold-light: #fff8e1;
+  /* চন্দন শ্বেত স্বর্ণাভা */
+  --gold-gradient: linear-gradient(135deg, #fffbeb 0%, #ffe082 25%, #ffd700 50%, #f59e0b 75%, #d97706 100%);
+  --gold-glow: 0 0 35px rgba(255, 215, 0, 0.5), 0 0 70px rgba(245, 158, 11, 0.3);
+
+  --temple-maroon: #3b0606;
+  /* রুদ্রাক্ষ ও সিঁদুরি লালচে মেরুন */
+  --temple-crimson: #5c0d0d;
+  /* বৈদিক যজ্ঞবেদী মেরুন */
+  --temple-dark: #1f0404;
+  /* গভীর দেবভূমি আভা */
+  --temple-black: #120202;
+  /* দিব্য অন্ধকার পটভূমি */
+
+  --sandalwood-cream: #fef9ed;
+  /* চন্দন ধবল টেক্সট */
+  --sandalwood-muted: #e2ceb5;
+  /* প্রশান্ত চন্দন রং */
+  --border-sacred: rgba(255, 215, 0, 0.35);
+  --border-glow: rgba(255, 145, 0, 0.6);
+
+  --font-bengali: 'Noto Serif Bengali', 'Hind Siliguri', serif;
+  --font-heading: 'Galada', 'Noto Serif Bengali', serif;
+  --font-body: 'Hind Siliguri', 'Plus Jakarta Sans', system-ui, sans-serif;
+
+  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-spring: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-body);
+  background-color: var(--temple-black);
+  color: var(--sandalwood-cream);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at 50% 0%, #2e0805 0%, #170303 50%, #0d0101 100%);
+  background-attachment: fixed;
+  color: var(--sandalwood-cream);
+  min-height: 100vh;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Custom divine scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a0303;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ffd700, #ff6f00, #b71c1c);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #fff9c4, #ffa000, #d32f2f);
+}
+
+/* ==========================================================================
+   Divine Keyframes & Transitions
+   ========================================================================== */
+@keyframes sacredAura {
+
+  0%,
+  100% {
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.35), 0 0 60px rgba(255, 111, 0, 0.2);
+    border-color: rgba(255, 215, 0, 0.6);
+  }
+
+  50% {
+    box-shadow: 0 0 50px rgba(255, 215, 0, 0.65), 0 0 90px rgba(255, 111, 0, 0.45);
+    border-color: #ffd700;
+  }
+}
+
+@keyframes divineShine {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes floatDiya {
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-8px) rotate(1.5deg);
+  }
+}
+
+@keyframes marq {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomGentle {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+@keyframes shimmerEffect {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes glowPulse {
+
+  0%,
+  100% {
+    filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.4));
+  }
+
+  50% {
+    filter: drop-shadow(0 0 35px rgba(255, 145, 0, 0.8));
+  }
+}
+
+.animate-diya {
+  animation: floatDiya 3.5s ease-in-out infinite;
+}
